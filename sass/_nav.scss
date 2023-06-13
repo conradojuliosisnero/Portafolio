@@ -15,6 +15,9 @@
             color: $clr-light-green;
             }
         }
+        #home{
+            scroll-behavior: smooth;
+        }
     }
     .menu{
         display: flex;

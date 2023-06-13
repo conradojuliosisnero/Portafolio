@@ -1,0 +1,38 @@
+.contenido__principal{
+    @include caja_flex(flex,center,center);
+    width: 100%;
+    justify-content: space-evenly;
+    // grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    .redes__sociales{
+        @include caja_flex(flex,center,center);
+        flex-basis: 50px;
+        flex-direction: column;
+        .iconos{
+            width: 30px;
+            cursor: pointer;
+            &:hover{
+                color: $clr-dartmouth-green;
+            }
+        }
+    }
+    .contenedor__bienvenida{
+        @include caja_flex(flex,center,center);
+        flex-direction: column;
+        flex-basis: 400px;
+        .bienvenida__titulo{
+            width: 100%;
+        @include caja_flex(flex,center,center);
+
+        }
+        .leyenda{
+            color: #818181;
+        }
+        .bienvenida__texto{
+            text-align: center;
+            color: #777575;
+        }
+        .contenedor__bienvenida--foto{
+            
+        }
+    }
+}
