@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
+body {
+  font-size: 16px;
+  width: 100%;
+  position: relative;
+}
+
+*, ::after, ::before {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navegador {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navegador .nevagador__titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navegador .nevagador__titulo .titulo {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.navegador .nevagador__titulo .titulo:hover {
+  color: #6ede8a;
+}
+.navegador .menu {
+  display: flex;
+  position: relative;
+  list-style: none;
+}
+.navegador .menu .lista {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0px 0px;
+}
+.navegador .menu .enlaces {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+  width: 100%;
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+.navegador .menu .enlaces:hover {
+  color: #6ede8a;
+}
+.navegador .modos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

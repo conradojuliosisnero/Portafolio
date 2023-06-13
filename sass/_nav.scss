@@ -1,0 +1,48 @@
+.navegador{
+    width: 100%;
+    @include caja_flex(flex,center,center);
+    .nevagador__titulo{
+        width: 100%;
+        display: flex;
+        // position:absolute;
+        justify-content: center;
+        .titulo{
+            padding: 10px;
+            font-size: $encabezado;
+            font-weight: 900;
+            cursor: pointer;
+            &:hover{
+            color: $clr-light-green;
+            }
+        }
+    }
+    .menu{
+        display: flex;
+        position: relative;
+        list-style: none;
+        .lista{
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 0px 0px;
+        }
+        .enlaces{
+            text-decoration: none;
+            font-weight: 700;
+            color: #000000;
+            width: 100%;
+            display: flex;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: color .4s ease;
+            &:hover{
+            color: $clr-light-green;
+            }
+        }
+    }
+    .modos{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

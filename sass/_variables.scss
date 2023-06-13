@@ -1,0 +1,43 @@
+// colores 
+
+$clr-pakistan-green: #10451dff;
+$clr-dartmouth-green: #155d27ff;
+$clr-dark-spring-green: #1a7431ff;
+$clr-forest-green: #208b3aff;
+$clr-pigment-green: #25a244ff;
+$clr-dark-pastel-green: #2dc653ff;
+$clr-malachite: #4ad66dff;
+$clr-light-green: #6ede8aff;
+$clr-celadon: #92e6a7ff;
+$clr-celadon-2: #b7efc5ff;
+
+// fuentes 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap');
+
+$font:'Red Hat Display', sans-serif;
+
+$titulos:27px;
+$encabezado:20px;
+$texto:17px;
+
+// funciones 
+@mixin caja_flex($display,$alig,$justify){
+    display: $display;
+    align-items: $alig;
+    justify-content: $justify;
+}
+
+// estilos globales 
+
+body{
+    font-size: 16px;
+    width: 100%;
+    position: relative;
+}
+
+*,::after,::before{
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
