@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
+html {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   font-size: 16px;
-  width: 100%;
+  width: 80%;
   position: relative;
 }
 
@@ -16,12 +21,11 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .navegador .nevagador__titulo {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 .navegador .nevagador__titulo .titulo {
   padding: 10px;
@@ -44,7 +48,7 @@ body {
   display: block;
   position: relative;
   width: 100%;
-  padding: 0px 0px;
+  width: 100%;
 }
 .navegador .menu .enlaces {
   text-decoration: none;
@@ -69,6 +73,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 90vh;
 }
 .contenido__principal .redes__sociales {
   display: flex;
@@ -76,9 +82,11 @@ body {
   justify-content: center;
   flex-basis: 50px;
   flex-direction: column;
+  padding: 0px 20px;
 }
 .contenido__principal .redes__sociales .iconos {
   width: 30px;
+  margin: 13px 0px;
   cursor: pointer;
 }
 .contenido__principal .redes__sociales .iconos:hover {
@@ -88,65 +96,68 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px 20px;
   flex-direction: column;
+  flex-shrink: 3;
 }
 .contenido__principal .contenedor__bienvenida .bienvenida__titulo {
+  font-size: 35px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.contenido__principal .contenedor__bienvenida .bienvenida__titulo h1 {
+  letter-spacing: 7px;
 }
 .contenido__principal .contenedor__bienvenida .leyenda {
   color: #818181;
+  font-size: 18px;
 }
 .contenido__principal .contenedor__bienvenida .bienvenida__texto {
+  width: 100%;
+  display: flex;
+}
+.contenido__principal .contenedor__bienvenida .bienvenida__texto .texto {
+  display: flex;
+  width: 40%;
   text-align: center;
+  line-height: 20px;
   color: #777575;
 }
 .contenido__principal .contenedor__bienvenida .boton__contactar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
 }
 .contenido__principal .contenedor__bienvenida .boton__contactar .boton {
   background-color: #4ad66d;
+  box-shadow: 0px 3px 15px 0px #4ad66d;
   border-radius: 7px;
   border: none;
-  padding: 15px 20px;
+  padding: 15px 30px;
+  margin: 25px 0px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: after 0.3s ease-in-out all;
   z-index: 1;
 }
-.contenido__principal .contenedor__bienvenida .boton__contactar .boton::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #777575;
-  left: -150px;
-  bottom: 0;
-  transition: left 0.3s ease-in-out;
-}
-.contenido__principal .contenedor__bienvenida .boton__contactar .boton:hover::after {
-  left: 0;
-  z-index: 2;
-}
 .contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
   color: #ffffff;
   text-decoration: none;
   font-size: 17px;
   font-weight: 600;
-  z-index: 1;
 }
 .contenido__principal .contenedor__foto {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 600px;
+  flex-basis: 550px;
   overflow: hidden;
   border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
 }

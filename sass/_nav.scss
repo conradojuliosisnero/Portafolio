@@ -1,11 +1,9 @@
 .navegador{
     width: 100%;
-    @include caja_flex(flex,center,center);
+    @include caja_flex(flex,center,space-around);
     .nevagador__titulo{
         width: 100%;
         display: flex;
-        // position:absolute;
-        justify-content: center;
         .titulo{
             padding: 10px;
             font-size: $encabezado;
@@ -27,7 +25,7 @@
             display: block;
             position: relative;
             width: 100%;
-            padding: 0px 0px;
+            width: 100%;
         }
         .enlaces{
             text-decoration: none;
