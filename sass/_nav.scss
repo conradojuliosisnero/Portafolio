@@ -1,9 +1,9 @@
 .navegador{
     width: 100%;
     @include caja_flex(flex,center,space-around);
-    position: sticky;
+    position: fixed;
     background-color: #ffffff;
-    .nevagador__titulo{
+    .navagador__titulo{
         width: 100%;
         display: flex;
         .titulo{

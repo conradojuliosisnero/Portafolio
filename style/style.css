@@ -23,23 +23,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: sticky;
+  position: fixed;
   background-color: #ffffff;
 }
-.navegador .nevagador__titulo {
+.navegador .navagador__titulo {
   width: 100%;
   display: flex;
 }
-.navegador .nevagador__titulo .titulo {
+.navegador .navagador__titulo .titulo {
   padding: 10px;
   font-size: 20px;
   font-weight: 900;
   cursor: pointer;
 }
-.navegador .nevagador__titulo .titulo:hover {
+.navegador .navagador__titulo .titulo:hover {
   color: #6ede8a;
 }
-.navegador .nevagador__titulo #home {
+.navegador .navagador__titulo #home {
   scroll-behavior: smooth;
 }
 .navegador .menu {
@@ -78,6 +78,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 90vh;
+  scroll-behavior: smooth;
 }
 .contenido__principal .redes__sociales {
   display: flex;
@@ -98,9 +99,9 @@ body {
 .contenido__principal .contenedor__bienvenida {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
-  height: 100%;
+  height: 60%;
   margin: 0px 20px;
   flex-direction: column;
   flex-shrink: 3;
@@ -114,6 +115,7 @@ body {
 }
 .contenido__principal .contenedor__bienvenida .bienvenida__titulo h1 {
   letter-spacing: 7px;
+  margin: 0px 0px;
 }
 .contenido__principal .contenedor__bienvenida .leyenda {
   color: #818181;
@@ -124,9 +126,10 @@ body {
   display: flex;
 }
 .contenido__principal .contenedor__bienvenida .bienvenida__texto .texto {
+  margin: 30px 0px;
   display: flex;
   width: 40%;
-  text-align: center;
+  text-align: start;
   line-height: 20px;
   color: #777575;
 }
@@ -137,8 +140,7 @@ body {
   width: 100%;
 }
 .contenido__principal .contenedor__bienvenida .boton__contactar .boton {
-  background-color: #4ad66d;
-  box-shadow: 0px 3px 15px 0px #4ad66d;
+  background-color: #6ede8a;
   border-radius: 7px;
   border: none;
   padding: 15px 30px;
@@ -146,7 +148,7 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: after 0.3s ease-in-out all;
+  transition: box-shadow 0.3s ease-in-out;
   z-index: 1;
 }
 .contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
@@ -154,6 +156,10 @@ body {
   text-decoration: none;
   font-size: 17px;
   font-weight: 600;
+}
+.contenido__principal .contenedor__bienvenida .boton__contactar .boton:hover {
+  box-shadow: 0px 3px 15px 0px #4ad66d;
+  background-color: #6ede8a;
 }
 .contenido__principal .contenedor__foto {
   width: 100%;
@@ -163,16 +169,94 @@ body {
   flex-basis: 550px;
   overflow: hidden;
   border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
+  transition: box-shadow 0.3s ease;
 }
 .contenido__principal .contenedor__foto .foto {
   width: 100%;
   height: 100%;
 }
+.contenido__principal .contenedor__foto:hover {
+  box-shadow: 0px 0px 15px 0px #777575;
+}
 
-.seccion__sobremi {
+.about {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding-top: 80px;
+}
+.about .about__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.about .about__titulo .titulo {
+  font-size: 45px;
+  font-weight: 500;
+}
+.about .about__titulo .leyenda {
+  font-weight: 500;
+  color: #b8b8b8;
+}
+.about .about__contenido {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px 0px 0px 0px;
+}
+.about .about__contenido .about__imagen {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 35px;
+  width: 100%;
+  height: 100%;
+}
+.about .about__contenido .about__imagen .imagen {
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.about .about__contenido .about__imagen span {
+  color: #b8b8b8;
+  padding: 10px 0px;
+}
+.about .about__contenido .about__texto {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 40%;
+  text-align: start;
+  flex-direction: column;
+}
+.about .about__contenido .about__texto .about__btn {
+  background-color: #6ede8a;
+  border-radius: 7px;
+  border: none;
+  padding: 15px 30px;
+  margin: 25px 0px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  z-index: 1;
+}
+.about .about__contenido .about__texto .about__btn a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+.about .about__contenido .about__texto .about__btn:hover {
+  box-shadow: 0px 3px 15px 0px #4ad66d;
+  background-color: #6ede8a;
 }/*# sourceMappingURL=style.css.map */
