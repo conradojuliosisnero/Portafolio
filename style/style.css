@@ -287,4 +287,78 @@ body {
   font-size: 25px;
   font-weight: 900;
   color: #000000;
+}
+
+.seccion__skills {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seccion__skills .contenedor__skills {
+  width: 100%;
+  height: 100%;
+}
+.seccion__skills .contenedor__skills .skills__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.seccion__skills .contenedor__skills .skills__titulo .titulo {
+  font-size: 45px;
+  font-weight: 500;
+}
+.seccion__skills .contenedor__skills .skills__titulo .leyenda {
+  font-weight: 700;
+  color: #777777;
+}
+.seccion__skills .contenedor__skills .cartas, .seccion__skills .contenedor__skills .skills__cartas .tailwind, .seccion__skills .contenedor__skills .skills__cartas .boostrap, .seccion__skills .contenedor__skills .skills__cartas .figma, .seccion__skills .contenedor__skills .skills__cartas .git, .seccion__skills .contenedor__skills .skills__cartas .react, .seccion__skills .contenedor__skills .skills__cartas .js, .seccion__skills .contenedor__skills .skills__cartas .sass, .seccion__skills .contenedor__skills .skills__cartas .css, .seccion__skills .contenedor__skills .skills__cartas .html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  padding: 25px;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: #777777 0px 3px 15px 0px;
+}
+.seccion__skills .contenedor__skills .skills__cartas {
+  margin: 45px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+.seccion__skills .contenedor__skills .skills__cartas .carta__btn {
+  background-color: #777777;
+  padding: 20px 50px;
+  border-radius: 7px;
+  border: none;
+}
+.seccion__skills .contenedor__skills .skills__cartas .carta__titulo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+.seccion__skills .contenedor__skills .skills__cartas .carta__leyenda {
+  color: #777777;
+}
+.seccion__skills .contenedor__skills .skills__cartas .carta__texto {
+  color: #777777;
+  width: 100%;
+  text-align: center;
+}
+
+.btn__fijo {
+  width: 100px;
+  height: 100px;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #2dc653;
 }/*# sourceMappingURL=style.css.map */
