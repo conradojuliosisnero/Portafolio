@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
+html {
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  width: 80%;
+  position: relative;
+}
+
+*, ::after, ::before {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navegador {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  background-color: #ffffff;
+}
+.navegador .nevagador__titulo {
+  width: 100%;
+  display: flex;
+}
+.navegador .nevagador__titulo .titulo {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.navegador .nevagador__titulo .titulo:hover {
+  color: #6ede8a;
+}
+.navegador .nevagador__titulo #home {
+  scroll-behavior: smooth;
+}
+.navegador .menu {
+  display: flex;
+  position: relative;
+  list-style: none;
+}
+.navegador .menu .lista {
+  display: block;
+  position: relative;
+  width: 100%;
+  width: 100%;
+}
+.navegador .menu .enlaces {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+  width: 100%;
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+.navegador .menu .enlaces:hover {
+  color: #6ede8a;
+}
+.navegador .modos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenido__principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+.contenido__principal .redes__sociales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50px;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+.contenido__principal .redes__sociales .iconos {
+  width: 30px;
+  margin: 13px 0px;
+  cursor: pointer;
+}
+.contenido__principal .redes__sociales .iconos:hover {
+  color: #155d27;
+}
+.contenido__principal .contenedor__bienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px 20px;
+  flex-direction: column;
+  flex-shrink: 3;
+}
+.contenido__principal .contenedor__bienvenida .bienvenida__titulo {
+  font-size: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contenido__principal .contenedor__bienvenida .bienvenida__titulo h1 {
+  letter-spacing: 7px;
+}
+.contenido__principal .contenedor__bienvenida .leyenda {
+  color: #818181;
+  font-size: 18px;
+}
+.contenido__principal .contenedor__bienvenida .bienvenida__texto {
+  width: 100%;
+  display: flex;
+}
+.contenido__principal .contenedor__bienvenida .bienvenida__texto .texto {
+  display: flex;
+  width: 40%;
+  text-align: center;
+  line-height: 20px;
+  color: #777575;
+}
+.contenido__principal .contenedor__bienvenida .boton__contactar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.contenido__principal .contenedor__bienvenida .boton__contactar .boton {
+  background-color: #4ad66d;
+  box-shadow: 0px 3px 15px 0px #4ad66d;
+  border-radius: 7px;
+  border: none;
+  padding: 15px 30px;
+  margin: 25px 0px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: after 0.3s ease-in-out all;
+  z-index: 1;
+}
+.contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+.contenido__principal .contenedor__foto {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 550px;
+  overflow: hidden;
+  border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
+}
+.contenido__principal .contenedor__foto .foto {
+  width: 100%;
+  height: 100%;
+}
+
+.seccion__sobremi {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
