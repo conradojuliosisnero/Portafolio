@@ -16,7 +16,7 @@
         @include caja_flex(flex,center,center);
         flex-direction: column;
         .bienvenida__titulo{
-            width: 100%;
+        width: 100%;
         @include caja_flex(flex,center,center);
 
 
@@ -28,16 +28,53 @@
             text-align: center;
             color: #777575;
         }
+        .boton__contactar{
+            @include caja_flex(flex,center,center);       
+            width: 100%;
+            .boton{
+                background-color: $clr-malachite;
+                border-radius:7px;
+                border: none;
+                padding: 15px 20px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: after .3s ease-in-out all;
+                z-index: 1;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #777575;
+                    left: -150px;
+                    bottom: 0;
+                    transition: left .3s ease-in-out;
+                }
+                &:hover::after{
+                    left: 0;
+                    z-index: 2;
+                }
+                a{
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: $texto;
+                    font-weight: 600;
+                    z-index: 1;
+                }
+            }
+        }
     }
     .contenedor__foto{
         width: 100%;
         @include caja_flex(flex,center,center);       
         flex-basis: 600px;
         overflow: hidden;
+        border-radius:90% 10% 42% 58% / 47% 42% 58% 53%  ;
+        
         .foto{
             width: 100%;
             height: 100%;
-            border-radius: 50%;
         }
     }
 }
