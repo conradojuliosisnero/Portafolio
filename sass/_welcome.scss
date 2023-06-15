@@ -13,11 +13,8 @@
             width: 30px;
             margin: 13px 0px;
             cursor: pointer;
-            
-            &:hover{
-                color: $clr-dartmouth-green;
-            }
         }
+
     }
     .contenedor__bienvenida{
         @include caja_flex(flex,center,space-around);
