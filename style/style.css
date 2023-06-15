@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
 html {
   display: flex;
+  width: 100%;
   justify-content: center;
   scroll-behavior: smooth;
 }
@@ -24,13 +25,16 @@ body {
   align-items: center;
   justify-content: space-around;
   position: fixed;
+  z-index: 1;
   background-color: #ffffff;
 }
 .navegador .navagador__titulo {
   width: 100%;
   display: flex;
+  position: relative;
 }
 .navegador .navagador__titulo .titulo {
+  position: relative;
   padding: 10px;
   font-size: 20px;
   font-weight: 900;
@@ -38,9 +42,6 @@ body {
 }
 .navegador .navagador__titulo .titulo:hover {
   color: #6ede8a;
-}
-.navegador .navagador__titulo #home {
-  scroll-behavior: smooth;
 }
 .navegador .menu {
   display: flex;
@@ -77,7 +78,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 90px;
+  height: 100vh;
   scroll-behavior: smooth;
 }
 .contenido__principal .redes__sociales {
@@ -151,7 +152,6 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
-  z-index: 1;
 }
 .contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
   color: #ffffff;
@@ -168,17 +168,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 550px;
+  flex-basis: 250px;
   position: relative;
+  z-index: -1;
 }
 .contenido__principal .contenedor__foto .foto {
-  width: 100%;
+  width: 450px;
   border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
 }
 
 .about {
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +190,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 50px;
 }
 .about .about__titulo .titulo {
   font-size: 45px;
@@ -252,7 +251,6 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
-  z-index: 1;
 }
 .about .about__contenido .about__texto .about__btn a {
   color: #ffffff;
@@ -368,46 +366,171 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
   transition-delay: 1s;
-  animation: botonfijo 3s forwards infinite;
-}
-.btn__fijo a:nth-child(2) {
-  animation: botonfijo1 3s forwards infinite;
+  animation: botonfijo 3s linear infinite;
 }
 .btn__fijo a .btn__iconos {
   width: 35px;
   height: 35px;
 }
-
 @keyframes botonfijo {
   0% {
     transform: translateY(75px);
   }
-  50% {
+  100% {
     transform: translateY(-75px);
   }
-  100% {
-    transform: translateY(75px);
-  }
 }
-@keyframes botonfijo1 {
-  0% {
+
+@media screen and (max-width: 1234px) {
+  .body {
+    position: relative;
+  }
+  .body .contenido__principal {
+    position: relative;
+    padding-top: 80px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .body .contenido__principal .redes__sociales {
+    flex-direction: row;
+    order: 3;
+    padding: 0px 30px;
+  }
+  .body .contenido__principal .redes__sociales .iconos {
+    width: 35px;
+    margin: 0px 70px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .body .contenido__principal .redes__sociales .iconos:hover {
+    transform: scale(1.4);
+  }
+  .body .contenido__principal .contenedor__bienvenida {
+    flex-direction: column;
+  }
+  .body .contenido__principal .contenedor__bienvenida .bienvenida__titulo {
+    font-size: 35px;
+  }
+  .body .contenido__principal .contenedor__bienvenida .bienvenida__titulo h1 {
+    letter-spacing: 7px;
+    margin: 0px 0px;
+  }
+  .body .contenido__principal .contenedor__bienvenida .bienvenida__texto {
     width: 100%;
-    transform: translateY(75px);
+    display: flex;
+    flex-direction: row;
   }
-  50% {
-    transform: translateY(-75px);
+  .body .contenido__principal .contenedor__bienvenida .bienvenida__texto .texto {
+    width: 100%;
   }
-  100% {
-    transform: translateY(75px);
-    width: 200%;
+  .body .contenido__principal .contenedor__bienvenida .boton__contactar {
+    margin-left: 35px;
+    z-index: -1;
+  }
+  .body .contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
+    font-size: 23px;
+  }
+  .body .contenido__principal .contenedor__foto {
+    z-index: -1;
+    order: 1;
+  }
+  .body .contenido__principal .contenedor__foto .foto {
+    width: 350px;
+    margin: 0;
+    margin: 40px 0px;
+  }
+  .body .btn__fijo {
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .body .btn__fijo a {
+    animation: botonfijo 1.8s ease infinite;
+  }
+  .body .btn__fijo a .btn__iconos {
+    width: 35px;
+    height: 35px;
+  }
+  .body .about .about__contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .body .about .about__contenido .about__imagen .imagen {
+    width: 350px;
+  }
+  .body .about .about__contenido .about__texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    flex-direction: column;
+  }
+  .body .about .about__contenido .about__texto .texto {
+    text-align: center;
+  }
+  .body .about .about__contenido .about__texto .about__btn {
+    width: 100%;
+    height: 65px;
+    z-index: -1;
+  }
+  .body .about .about__contenido .about__texto .about__btn a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .body .about .about__contenido .about__texto .about__btn:hover {
+    box-shadow: 0px 3px 15px 0px #4ad66d;
+    background-color: #6ede8a;
+  }
+  .body .about .about__contenido .about__texto .estadisticas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .body .about .about__contenido .about__texto .estadisticas div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    color: #b8b8b8;
+    padding: 20px 10px;
+  }
+  .body .about .about__contenido .about__texto .estadisticas div .numero {
+    font-size: 25px;
+    font-weight: 900;
+    color: #000000;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 475px) {
+  body {
+    position: relative;
+    width: 100%;
+  }
+  body .navegador {
+    position: relative;
+    background-color: transparent;
+  }
+  body .navegador .navagador__titulo {
+    background-color: transparent;
+  }
+  body .navegador .navagador__titulo .titulo {
+    font-size: 25px;
+    position: relative;
+  }
+  body .navegador .menu .lista {
+    display: none;
+  }
   body .contenido__principal {
-    padding-top: 90px;
+    position: relative;
     flex-direction: column;
     justify-content: center;
   }
@@ -416,54 +539,13 @@ body {
     order: 3;
     padding: 0px 30px;
   }
-  body .contenido__principal .contenedor__bienvenida {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 60%;
-    margin: 0px 20px;
-    flex-direction: column;
+  body .contenido__principal .redes__sociales .iconos {
+    width: 35px;
+    margin: 0px 70px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
   }
-  body .contenido__principal .contenedor__bienvenida .bienvenida__titulo {
-    font-size: 35px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  body .contenido__principal .contenedor__bienvenida .bienvenida__titulo h1 {
-    letter-spacing: 7px;
-    margin: 0px 0px;
-  }
-  body .contenido__principal .contenedor__bienvenida .leyenda {
-    color: #818181;
-    font-size: 18px;
-  }
-  body .contenido__principal .contenedor__bienvenida .bienvenida__texto {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  body .contenido__principal .contenedor__bienvenida .bienvenida__texto .texto {
-    width: 100%;
-  }
-  body .contenido__principal .contenedor__bienvenida .boton__contactar {
-    z-index: -1;
-  }
-  body .contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
-    font-size: 23px;
-  }
-  body .contenido__principal .contenedor__foto {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: -1;
-  }
-  body .contenido__principal .contenedor__foto .foto {
-    width: 350px;
-    border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
+  body .contenido__principal .redes__sociales .iconos:hover {
+    transform: scale(1.4);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,14 +1,13 @@
 // caja principal
 .about{
     width: 100%;
-    height: 100vh;
     @include caja_flex(flex,center,center);
     flex-direction: column;
     padding-top:80px;
     .about__titulo{
         @include caja_flex(flex,center,center);
         flex-direction: column;
-        margin-bottom: 50px;
+
         .titulo{
             font-size: 45px;
             font-weight: 500;
@@ -64,7 +63,6 @@
                     overflow: hidden;
                     cursor: pointer;
                     transition: box-shadow .3s ease-in-out;
-                    z-index: 1;
                     a{
                         color: #ffffff;
                         text-decoration: none;
