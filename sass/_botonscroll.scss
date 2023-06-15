@@ -5,7 +5,9 @@
     bottom:30px;
     position: fixed;
     border-radius: 50%;
+    overflow: hidden;
     background-color: #e4e4e4;
+    cursor: pointer;
         a{
             display: flex;
             width: 100%;
@@ -16,24 +18,44 @@
             position: relative;
             overflow: hidden;
             transition-delay: 1s;
-            animation: botonfijo 3s linear infinite;
+            animation: botonfijo 3s forwards infinite;
+            &:nth-child(2){
+            animation: botonfijo1 3s forwards infinite;
+            }
             .btn__iconos{
-            margin: 5px 0px;
+            // margin: 65px 0px;
             width: 35px;
             height: 35px;
-            }
-
-    }
+        }
+            
+        }
+        // &:hover > a{
+        //     animation: botonfijo 3s forwards infinite;
+        // }
 }
 
 @keyframes botonfijo {
     0%{
-        transform: translateY(7px);
+        transform: translateY(75px);
     }
     50%{
-        transform: translateY(5px);
+        transform: translateY(-75px);
     }
     100%{
-        transform: translateY(0px);
+        transform: translateY(75px);
+    }
+}
+
+@keyframes botonfijo1 {
+    0%{
+        width: 100%;
+        transform: translateY(75px);
+    }
+    50%{
+        transform: translateY(-75px);
+    }
+    100%{
+        transform: translateY(75px);
+        width: 200%;
     }
 }

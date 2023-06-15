@@ -1,7 +1,8 @@
 .contenido__principal{
     @include caja_flex(flex,center,center);
     width: 100%;
-    height: 90vh;
+    padding-top: 90px;
+    // height: 90vh;
     scroll-behavior: smooth;
 
     .redes__sociales{
@@ -13,6 +14,10 @@
             width: 30px;
             margin: 13px 0px;
             cursor: pointer;
+            transition: transform .3s ease ;
+            &:hover{
+                transform: scale(1.4)
+            }
         }
 
     }
@@ -40,6 +45,7 @@
         .bienvenida__texto{
             width: 100%;
             display: flex;
+            flex-direction: column;
             .texto{
                 margin: 30px 0px;
                 display: flex;
@@ -79,15 +85,12 @@
         width: 100%;
         @include caja_flex(flex,center,center);       
         flex-basis: 550px;
-        overflow: hidden;
-        border-radius:90% 10% 42% 58% / 47% 42% 58% 53%  ;
-        transition: box-shadow .3s ease;
+        position: relative;
+        // z-index: 2;
         .foto{
             width: 100%;
-            height: 100%;
-        }
-        &:hover{
-            box-shadow: 0px 0px 15px 0px #777575;
+            border-radius:90% 10% 42% 58% / 47% 42% 58% 53%  ;
+            // height: 100%;
         }
     }
 }
