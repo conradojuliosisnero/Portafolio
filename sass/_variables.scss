@@ -30,19 +30,31 @@ $texto:17px;
 // estilos globales 
 
 html{
-    display: flex;
-    width: 100%;
-    justify-content: center;
     scroll-behavior: smooth;
 }
 
 body{
 
     font-size: 16px;
-    width: 80%;
+    width: 100%;
     position: relative;
+    transition:background-color .5s ease-in;
+
+    &.modo-oscuro{
+        background-color: #282828;
+        color: #ffffff;
+        transition:.5s ease-in all;
+
+    }
     
+    &.modo-claro{
+        background-color: #ffffff;
+        color: #000000;
+    }
+
 }
+
+
 
 *,::after,::before{
     font-family: $font;

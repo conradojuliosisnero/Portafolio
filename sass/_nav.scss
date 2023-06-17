@@ -1,6 +1,9 @@
 .navegador{
     width: 100%;
-    @include caja_flex(flex,center,space-around);
+    @include caja_flex(flex,center,center);
+    transition:background-color .5s ease-in;
+    // justify-content: space-between;
+
     position: fixed;
     z-index: 1;
     background-color: #ffffff;
@@ -8,6 +11,7 @@
     .navagador__titulo{
         width: 100%;
         display: flex;
+        justify-content: center;
         position: relative;
         .titulo{
             position: relative;
@@ -27,8 +31,7 @@
         .lista{
             display: block;
             position: relative;
-            width: 100%;
-            width: 100%;
+            // width: 100%;
         }
         .enlaces{
             text-decoration: none;
@@ -48,5 +51,46 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        overflow: hidden;
+        .luna{
+            width: 50px;
+            margin: 20px;
+            cursor: pointer;
+        }     
+        .sol{
+            width: 50px;
+            margin: 20px;
+            cursor: pointer;
+            display: none;
+        }
     }
 }
+
+.nav-dark{
+    background-color: #282828;
+    color: #ffffff;
+    .navagador__titulo{
+        color: #ffffff;
+    }
+    .menu{
+        .enlaces{
+            color: #ffffff;
+        }
+    }
+}
+
+.nav-white{
+    background-color: #ffffff;
+    color: #000000;
+    .navagador__titulo{
+        color: #000000;
+    }
+    .menu{
+        .enlaces{
+            color: #000000;
+        }
+    }
+}
+
+
+

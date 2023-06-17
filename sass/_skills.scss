@@ -1,5 +1,5 @@
 .seccion__skills{
-    padding-top: 80px;
+    padding-top: 180px;
     width: 100%;
     @include caja_flex(flex,center,center);
     .contenedor__skills{
@@ -21,13 +21,13 @@
         // clase extendida/ no existe en el html 
         .cartas{
             @include caja_flex(flex,center,center);
+            justify-content: space-around;
             width: 100%;
             height: 400px;
             padding: 25px;
             flex-direction: column;
-            background-color: transparent;
+            background-color: #d9d9d9;
             border-radius: 10px;
-            box-shadow: #777777 0px 3px 15px 0px;
         
         }
 
@@ -36,7 +36,7 @@
             margin: 45px 0px 0px 0px;
             display: grid;
             grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-            gap: 15px;
+            gap: 30px;
             // cartas 
             .html{@extend .cartas;}
             .css{@extend .cartas;}
@@ -49,9 +49,13 @@
             .tailwind{@extend .cartas;}
             // boton cartas 
             .carta__btn{
-                background-color: #777777;
+                cursor: pointer;
+                background: #e0e0e0;
+                box-shadow:  5px 5px 10px #b3b3b3,
+                             -5px -5px 10px #ffffff;
                 padding: 20px 50px;
-                border-radius: 7px;
+                border-radius: 15px;
+                margin-top: 35px;
                 border: none;
             }
             // titulos 
@@ -59,9 +63,24 @@
                 font-size: 20px;
                 font-weight: 800;
                 letter-spacing: 5px;
+                display: none;
             }
-            .carta__leyenda{color: #777777;}
+            .img{
+                width: 150px;
+                height: 150px;
+                border-radius: 10px;
+                object-fit: contain;
+                // flex-basis: 150px;
+            }
+            .carta__leyenda__img{
+                display: none;
+            }
+            .carta__leyenda{
+                display: none;
+                color: #777777;
+            }
             .carta__texto{
+                display: none;
                 color: #777777;
                 width: 100%;
                 text-align: center;

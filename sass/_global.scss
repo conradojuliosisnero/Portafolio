@@ -1,9 +1,9 @@
-@media screen and (max-width: 1234px) {
+@media screen and (max-width: 1024px) {
   .body {
     position: relative;
     .contenido__principal {
       position: relative;
-      padding-top: 80px;
+      padding-top: 180px;
       flex-direction: column;
       justify-content: center;
       .redes__sociales {
@@ -71,6 +71,7 @@
       }
     }
     .about {
+        padding-top:180px;
       .about__contenido {
         @include caja_flex(flex, center, center);
         flex-direction: column;
@@ -134,8 +135,12 @@
 
 // moviles
 @media screen and (max-width: 475px) {
+  html{
+    width: 100%;
+    
+  }
   body {
-    position: relative;
+    // position: relative;
     width: 100%;
     .navegador {
         position: relative;
