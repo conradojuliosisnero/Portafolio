@@ -1,12 +1,10 @@
 .navegador{
     width: 100%;
     @include caja_flex(flex,center,center);
-    transition:background-color .5s ease-in;
-    // justify-content: space-between;
-
-    position: fixed;
+    position: relative;
     z-index: 1;
     background-color: #ffffff;
+    transition:background-color .5s ease-in;
     
     .navagador__titulo{
         width: 100%;

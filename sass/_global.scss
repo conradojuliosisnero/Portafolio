@@ -1,15 +1,16 @@
 @media screen and (max-width: 1024px) {
   .body {
     position: relative;
+    padding: 0px 30px;
     .contenido__principal {
-      position: relative;
-      padding-top: 180px;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-areas: 
+      "contenido contenido contenido contenido"
+      "foto foto foto foto"
+      "redes redes redes redes";
       .redes__sociales {
         flex-direction: row;
-        order: 3;
-        padding: 0px 30px;
         .iconos {
           width: 35px;
           margin: 0px 70px;
@@ -22,8 +23,10 @@
       }
       .contenedor__bienvenida {
         flex-direction: column;
+        padding: 20px;
         .bienvenida__titulo {
           font-size: 35px;
+          justify-content: flex-start;
           h1 {
             letter-spacing: 7px;
             margin: 0px 0px;
@@ -32,7 +35,7 @@
         .bienvenida__texto {
           width: 100%;
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           .texto {
             width: 100%;
           }
@@ -87,13 +90,13 @@
           text-align: center;
           flex-direction: column;
           .texto {
-            text-align: center;
+            width: 100%;
+            text-align: start;
           }
           // boton para descargar cv
           .about__btn {
             width: 100%;
             height: 65px;
-            z-index: -1;
             a {
               color: #ffffff;
               text-decoration: none;
@@ -114,12 +117,10 @@
               flex-direction: column;
               text-align: center;
               font-weight: 500;
-              color: #b8b8b8;
               padding: 20px 10px;
               .numero {
                 font-size: 25px;
                 font-weight: 900;
-                color: #000000;
               }
             }
           }
@@ -135,18 +136,13 @@
 
 // moviles
 @media screen and (max-width: 475px) {
-  html{
-    width: 100%;
-    
-  }
   body {
-    // position: relative;
+    position: relative;
     width: 100%;
     .navegador {
         position: relative;
-        background-color: transparent;
+        justify-content: space-between;
       .navagador__titulo {
-        background-color: transparent;
         .titulo {
           font-size: 25px;
           position: relative;

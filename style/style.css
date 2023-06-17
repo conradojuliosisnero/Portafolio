@@ -31,10 +31,10 @@ body.modo-claro {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.5s ease-in;
-  position: fixed;
+  position: relative;
   z-index: 1;
   background-color: #ffffff;
+  transition: background-color 0.5s ease-in;
 }
 .navegador .navagador__titulo {
   width: 100%;
@@ -117,10 +117,9 @@ body.modo-claro {
 .contenido__principal {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: "redes contenido contenido contenido foto foto" "redes contenido contenido contenido foto foto";
+  grid-template-areas: "redes contenido contenido foto foto foto" "redes contenido contenido foto foto foto";
   grid-template-rows: 2 1fr;
   width: 100%;
-  height: 100vh;
 }
 .contenido__principal .redes__sociales {
   grid-area: redes;
@@ -449,17 +448,15 @@ body.modo-claro {
 @media screen and (max-width: 1024px) {
   .body {
     position: relative;
+    padding: 0px 30px;
   }
   .body .contenido__principal {
-    position: relative;
-    padding-top: 180px;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "contenido contenido contenido contenido" "foto foto foto foto" "redes redes redes redes";
   }
   .body .contenido__principal .redes__sociales {
     flex-direction: row;
-    order: 3;
-    padding: 0px 30px;
   }
   .body .contenido__principal .redes__sociales .iconos {
     width: 35px;
@@ -472,9 +469,11 @@ body.modo-claro {
   }
   .body .contenido__principal .contenedor__bienvenida {
     flex-direction: column;
+    padding: 20px;
   }
   .body .contenido__principal .contenedor__bienvenida .bienvenida__titulo {
     font-size: 35px;
+    justify-content: flex-start;
   }
   .body .contenido__principal .contenedor__bienvenida .bienvenida__titulo h1 {
     letter-spacing: 7px;
@@ -483,7 +482,7 @@ body.modo-claro {
   .body .contenido__principal .contenedor__bienvenida .bienvenida__texto {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   .body .contenido__principal .contenedor__bienvenida .bienvenida__texto .texto {
     width: 100%;
@@ -538,12 +537,12 @@ body.modo-claro {
     flex-direction: column;
   }
   .body .about .about__contenido .about__texto .texto {
-    text-align: center;
+    width: 100%;
+    text-align: start;
   }
   .body .about .about__contenido .about__texto .about__btn {
     width: 100%;
     height: 65px;
-    z-index: -1;
   }
   .body .about .about__contenido .about__texto .about__btn a {
     color: #ffffff;
@@ -568,28 +567,21 @@ body.modo-claro {
     flex-direction: column;
     text-align: center;
     font-weight: 500;
-    color: #b8b8b8;
     padding: 20px 10px;
   }
   .body .about .about__contenido .about__texto .estadisticas div .numero {
     font-size: 25px;
     font-weight: 900;
-    color: #000000;
   }
 }
 @media screen and (max-width: 475px) {
-  html {
-    width: 100%;
-  }
   body {
+    position: relative;
     width: 100%;
   }
   body .navegador {
     position: relative;
-    background-color: transparent;
-  }
-  body .navegador .navagador__titulo {
-    background-color: transparent;
+    justify-content: space-between;
   }
   body .navegador .navagador__titulo .titulo {
     font-size: 25px;

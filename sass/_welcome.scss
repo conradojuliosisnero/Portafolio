@@ -2,11 +2,11 @@
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: 
-    "redes contenido contenido contenido foto foto"
-    "redes contenido contenido contenido foto foto";
+    "redes contenido contenido foto foto foto"
+    "redes contenido contenido foto foto foto";
     grid-template-rows: 2 1fr;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     .redes__sociales{
         grid-area: redes;
         @include caja_flex(flex,center,center);
