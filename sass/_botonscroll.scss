@@ -1,9 +1,9 @@
 .btn__fijo {
   width: 90px;
   height: 90px;
-  right: 30px;
+  left: 50%;
   bottom: 30px;
-  position: fixed;
+  position: sticky;
   border-radius: 50%;
   background-color: #e4e4e4;
   transition:background-color .5s ease-in;
