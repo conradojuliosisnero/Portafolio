@@ -27,9 +27,9 @@
         .about__imagen{
             @include caja_flex(flex,center,center);
             flex-direction: column;
-            padding: 0px 35px;
-            height: 100%;
-            flex-basis: 400px;
+            // padding: 0px 35px;
+            // height: 100%;
+            // flex-basis: 400px;
             .imagen{
                 width: 100%;
                 object-fit: cover;

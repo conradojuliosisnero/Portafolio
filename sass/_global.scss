@@ -1,7 +1,7 @@
 @media screen and (max-width: 1024px) {
   .body {
     position: relative;
-    padding: 0px 30px;
+    // padding: 0px 30px;
     .contenido__principal {
       display: grid;
       grid-template-columns: repeat(4,1fr);
@@ -137,7 +137,9 @@
 // moviles
 @media screen and (max-width: 475px) {
   body {
-    position: relative;
+    // position: relative;
+    margin: 0;
+    padding: 0;
     width: 100%;
     .navegador {
         position: relative;
@@ -155,13 +157,17 @@
       }
     }
     .contenido__principal {
-      position: relative;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-areas: 
+      "contenido contenido contenido contenido"
+      "foto foto foto foto"
+      "redes redes redes redes";
       .redes__sociales {
         flex-direction: row;
-        order: 3;
-        padding: 0px 30px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
         .iconos {
           width: 35px;
           margin: 0px 70px;

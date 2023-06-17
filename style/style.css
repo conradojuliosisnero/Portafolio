@@ -74,12 +74,6 @@ body.modo-claro {
 .navegador .menu .enlaces:hover {
   color: #6ede8a;
 }
-.navegador .modos {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
 .navegador .modos .luna {
   width: 50px;
   margin: 20px;
@@ -119,20 +113,17 @@ body.modo-claro {
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: "redes contenido contenido foto foto foto" "redes contenido contenido foto foto foto";
   grid-template-rows: 2 1fr;
-  width: 100%;
 }
 .contenido__principal .redes__sociales {
   grid-area: redes;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 50px;
   flex-direction: column;
-  padding: 0px 20px;
 }
 .contenido__principal .redes__sociales .iconos {
   width: 30px;
-  margin: 13px 0px;
+  margin: 0;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -179,7 +170,6 @@ body.modo-claro {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
 }
 .contenido__principal .contenedor__bienvenida .boton__contactar .boton {
   background-color: #6ede8a;
@@ -203,17 +193,16 @@ body.modo-claro {
   background-color: #6ede8a;
 }
 .contenido__principal .contenedor__foto {
-  grid-area: foto;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 250px;
-  position: relative;
-  z-index: -1;
+  width: 100%;
+  grid-area: foto;
 }
 .contenido__principal .contenedor__foto .foto {
-  width: 450px;
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
 }
 
@@ -252,9 +241,6 @@ body.modo-claro {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0px 35px;
-  height: 100%;
-  flex-basis: 400px;
 }
 .about .about__contenido .about__imagen .imagen {
   width: 100%;
@@ -448,7 +434,6 @@ body.modo-claro {
 @media screen and (max-width: 1024px) {
   .body {
     position: relative;
-    padding: 0px 30px;
   }
   .body .contenido__principal {
     display: grid;
@@ -576,7 +561,8 @@ body.modo-claro {
 }
 @media screen and (max-width: 475px) {
   body {
-    position: relative;
+    margin: 0;
+    padding: 0;
     width: 100%;
   }
   body .navegador {
@@ -591,14 +577,15 @@ body.modo-claro {
     display: none;
   }
   body .contenido__principal {
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "contenido contenido contenido contenido" "foto foto foto foto" "redes redes redes redes";
   }
   body .contenido__principal .redes__sociales {
     flex-direction: row;
-    order: 3;
-    padding: 0px 30px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
   }
   body .contenido__principal .redes__sociales .iconos {
     width: 35px;
