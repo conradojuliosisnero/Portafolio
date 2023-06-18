@@ -84,11 +84,11 @@
     }
     .contenedor__foto{
         @include caja_flex(flex,center,center);       
-        width: 100%;
+        // width: 100%;
         grid-area: foto;
         .foto{
             width:250px;
-            object-fit: cover;
+            // object-fit: cover;
             border-radius:90% 10% 42% 58% / 47% 42% 58% 53%  ;
         }
     }
