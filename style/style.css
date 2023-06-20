@@ -28,7 +28,6 @@ body.modo-claro {
 
 .navegador {
   width: 100%;
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +88,6 @@ body.modo-claro {
   cursor: pointer;
   outline: none;
   overflow: hidden;
-  transition: 0.3s ease-in-out all;
 }
 .navegador .contend__swich .swich::after {
   content: "";
@@ -106,7 +104,6 @@ body.modo-claro {
 }
 .navegador .contend__swich .swich.active {
   background-color: #ffffff;
-  transition: left 0.3s ease;
 }
 .navegador .contend__swich .swich.active::after {
   left: unset;
@@ -162,9 +159,12 @@ body.modo-claro {
   justify-content: center;
   flex-direction: column;
 }
+.contenido__principal .redes__sociales .list__iconos {
+  list-style: none;
+}
 .contenido__principal .redes__sociales .iconos {
-  width: 30px;
-  margin: 0;
+  width: 35px;
+  margin: 10px 0px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }

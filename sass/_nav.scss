@@ -97,28 +97,6 @@
   }
 }
 
-@keyframes mododark {
-    0%{
-        &.active {
-            background-color: #ffffff;
-            transition: left .3s ease;
-            &::after {
-                left: 0;
-                right: unset;
-            }
-          }
-    }100%{
-        &.active {
-            background-color: #ffffff;
-            transition: left .3s ease;
-            &::after {
-                left: unset;
-                right: 0;
-            }
-          }
-    }
-}
-
 .nav-dark {
   background-color: #282828;
   color: #ffffff;
