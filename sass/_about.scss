@@ -25,15 +25,15 @@
         padding: 25px 0px 0px 0px;
         // imagen del perfil 
         .about__imagen{
-            @include caja_flex(flex,center,center);
+            // @include caja_flex(flex,center,center);
             flex-direction: column;
             // padding: 0px 35px;
             // height: 100%;
             // flex-basis: 400px;
             .imagen{
-                width: 100%;
+                width: 150px;
                 object-fit: cover;
-                border-radius: 15px;
+                // border-radius: 15px;
             }
             span{
                 color: #b8b8b8;

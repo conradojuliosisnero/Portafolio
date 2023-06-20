@@ -51,7 +51,6 @@
         }
       }
       .contenedor__foto {
-        z-index: -1;
         order: 1;
         .foto {
           width: 350px;
@@ -176,6 +175,14 @@
           &:hover {
             transform: scale(1.4);
           }
+        }
+      }
+      .contenedor__foto {
+        order: 1;
+        margin: 0;
+        .foto {
+          width: 350px;
+          margin: 0;
         }
       }
     }
