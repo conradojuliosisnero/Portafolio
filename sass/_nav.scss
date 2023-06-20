@@ -3,6 +3,7 @@
   @include caja_flex(flex, center, center);
   position: relative;
   z-index: 1;
+  padding: 20px 0px;
   background-color: #ffffff;
   transition: background-color 0.5s ease-in;
 
