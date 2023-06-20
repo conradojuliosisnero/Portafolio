@@ -28,6 +28,7 @@ body.modo-claro {
 
 .navegador {
   width: 100%;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,16 +75,34 @@ body.modo-claro {
 .navegador .menu .enlaces:hover {
   color: #6ede8a;
 }
-.navegador .modos .luna {
-  width: 50px;
-  margin: 20px;
+.navegador .swich {
+  display: flex;
+  background-color: #282828;
+  border-radius: 30px;
+  outline: none;
   cursor: pointer;
+  position: relative;
 }
-.navegador .modos .sol {
-  width: 50px;
-  margin: 20px;
-  cursor: pointer;
-  display: none;
+.navegador .swich .luna, .navegador .swich .sol {
+  width: 40px;
+}
+.navegador .swich::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: unset;
+  width: 40px;
+  height: 40px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+.navegador .swich.active {
+  background-color: #e1e1e1;
+}
+.navegador .swich.active::after {
+  left: unset;
+  right: 0;
 }
 
 .nav-dark {

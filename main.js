@@ -1,21 +1,30 @@
-const luna = document.querySelector('.luna');
-const sol = document.querySelector('.sol');
 const btnFijo = document.querySelector('.btn__fijo');
 const nav = document.querySelector('.navegador');
+const swich = document.querySelector('.swich');
 
-luna.addEventListener('click',()=>{
+swich.addEventListener('click',()=>{
+  swich.classList.toggle('active');
   document.body.classList.toggle('modo-oscuro');
   nav.classList.toggle('nav-dark');
   btnFijo.classList.toggle('boton-dark');
-  // sol.style.display='block';
+
+  if (document.body.classList.contains('modo-oscuro')) {
+    localStorage.setItem('dark','true')
+  } else{
+    localStorage.setItem('dark','false')
+  }
 })
 
-sol.addEventListener('click',()=>{
-  document.body.classList.toggle('modo-claro');
-  nav.classList.toggle('nav-white');
-  btnFijo.remove.classList('boton-dark');
-  // luna.style.display='block';
-})
+if (localStorage.getItem('dark') === 'true') {
+  document.body.classList.add('modo-oscuro');
+  nav.classList.add('nav-dark');
+  swich.classList.add('active');
+}else{
+  document.body.classList.remove('modo-oscuro');
+  nav.classList.remove('nav-dark');
+  swich.classList.remove('active');
+
+}
 
 
 
