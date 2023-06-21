@@ -14,24 +14,21 @@
         "contenido contenido contenido contenido"
         "foto foto foto foto"
         "redes redes redes redes";
-      .redes__sociales {
-        display: flex;
-        justify-content: space-evenly;
-        .list__iconos {
-          display: flex;
+        .redes__sociales {
+          flex-direction: row;
           justify-content: center;
-          width: 100%;
-        }
-        .iconos {
-          width: 45px;
-          margin: 0px 5px;
-          cursor: pointer;
-          transition: transform 0.3s ease;
-          &:hover {
-            transform: scale(1.4);
+          margin: 0;
+          padding: 0;
+          .iconos {
+            width: 35px;
+            margin: 0px 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            &:hover {
+              transform: scale(1.4);
+            }
           }
         }
-      }
       .contenedor__bienvenida {
         flex-direction: column;
         padding: 20px;
@@ -53,8 +50,6 @@
         }
         .boton__contactar {
           margin-left: 35px;
-
-          z-index: -1;
           .boton {
             a {
               font-size: 23px;
@@ -171,11 +166,63 @@
         }
       }
     }
-  }
-}
+    .contend__cards-proyectos{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      .card{
+          @include caja_flex(flex,center,center);
+          cursor: pointer;
+          position: relative;
+          flex-direction: column;
+          width: 250px;
+          height: 350px;
+          border-radius: 15px;
+          border:solid white 2px;
+          overflow: hidden;
+          .contend__img{
+              @include caja_flex(flex,center,center);
+              width: 100%;
+              img{
+                  width:100%;
+                  height: 100%;
+                  object-fit:cover;
+                  border-radius: 10px;
+              }
+          }
+          .contenido{
+              @include caja_flex(flex,center,center);
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              bottom: -500px;
+              flex-direction:column;
+              backdrop-filter: blur(10px);
+              transition:bottom .5s ease-in-out;
+              background-color: rgba(70, 70, 70, 0.81);
+              a{
+                  text-decoration: none;
+                  font-size: 30px;
+                  color: #ffff;
+                  transition:color .5s ease;
+                  &:hover{
+                      color:$clr-light-green;
+                  }
+              }
+              .leyenda__card{
+              @include caja_flex(flex,center,center);
+              }
+              .iconos__card{
+                  @include caja_flex(flex,center,center);
+              }
+          }
 
-// tabletas
-@media screen and (max-width: 735px) {
+      }
+  }
+  }
 }
 
 // moviles
@@ -230,6 +277,25 @@
           margin: 0;
         }
       }
+      .redes__sociales{
+        grid-area: redes;
+        @include caja_flex(flex,center,center);
+        flex-direction: column;
+        .list__iconos{
+            display: flex;
+            width: 40%;
+            justify-content: center;
+        }
+        .iconos{
+            width: 25px;    
+            margin: 0px;
+            transition: transform .3s ease ;
+            &:hover{
+                transform: scale(1.4)
+            }
+        }
     }
+    }
+    
   }
 }

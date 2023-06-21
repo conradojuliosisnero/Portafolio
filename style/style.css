@@ -150,6 +150,7 @@ body.modo-claro {
 }
 
 .contenido__principal {
+  padding: 50px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: "redes contenido contenido foto foto foto" "redes contenido contenido foto foto foto";
@@ -166,6 +167,7 @@ body.modo-claro {
   display: flex;
   width: 100%;
   justify-content: center;
+  margin: 0px;
 }
 .contenido__principal .redes__sociales .iconos {
   width: 35px;
@@ -422,6 +424,9 @@ body.modo-claro {
   font-weight: 500;
 }
 .seccion__skills .contend__cards {
+  background: url(../imagenes/Sound\ Wave.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -435,6 +440,7 @@ body.modo-claro {
   margin: 40px 70px;
   box-shadow: 0px 0px 5px 0px #000000;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4588235294);
 }
 .seccion__skills .contend__cards .skill__card:hover > .skill__img {
   width: 150px;
@@ -494,7 +500,9 @@ body.modo-claro {
 
 .seccion__proyectos {
   width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   padding: 50px;
 }
 .seccion__proyectos .contend__titulo {
@@ -506,6 +514,78 @@ body.modo-claro {
   font-size: 45px;
   font-weight: 500;
   padding: 10px;
+}
+.seccion__proyectos .contend__cards-proyectos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 45px;
+  background: url(../imagenes/background\ .svg);
+  justify-items: center;
+}
+.seccion__proyectos .contend__cards-proyectos .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+  border-radius: 15px;
+  border: solid white 2px;
+  overflow: hidden;
+}
+.seccion__proyectos .contend__cards-proyectos .card .contend__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.seccion__proyectos .contend__cards-proyectos .card .contend__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.seccion__proyectos .contend__cards-proyectos .card .contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -500px;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: bottom 0.5s ease-in-out;
+  background-color: rgba(70, 70, 70, 0.81);
+}
+.seccion__proyectos .contend__cards-proyectos .card .contenido a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  transition: color 0.5s ease;
+}
+.seccion__proyectos .contend__cards-proyectos .card .contenido a:hover {
+  color: #6ede8a;
+}
+.seccion__proyectos .contend__cards-proyectos .card .contenido .leyenda__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seccion__proyectos .contend__cards-proyectos .card .contenido .iconos__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seccion__proyectos .contend__cards-proyectos .card:hover > .contenido {
+  bottom: 0;
 }
 
 .btn__fijo {
@@ -625,17 +705,14 @@ body.modo-claro {
     grid-template-areas: "contenido contenido contenido contenido" "foto foto foto foto" "redes redes redes redes";
   }
   .body .contenido__principal .redes__sociales {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .body .contenido__principal .redes__sociales .list__iconos {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
-    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   .body .contenido__principal .redes__sociales .iconos {
-    width: 45px;
-    margin: 0px 5px;
+    width: 35px;
+    margin: 0px 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -664,7 +741,6 @@ body.modo-claro {
   }
   .body .contenido__principal .contenedor__bienvenida .boton__contactar {
     margin-left: 35px;
-    z-index: -1;
   }
   .body .contenido__principal .contenedor__bienvenida .boton__contactar .boton a {
     font-size: 23px;
@@ -780,6 +856,73 @@ body.modo-claro {
     margin: 0;
     cursor: pointer;
   }
+  .body .contend__cards-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .body .contend__cards-proyectos .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    border: solid white 2px;
+    overflow: hidden;
+  }
+  .body .contend__cards-proyectos .card .contend__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .body .contend__cards-proyectos .card .contend__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .body .contend__cards-proyectos .card .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -500px;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    transition: bottom 0.5s ease-in-out;
+    background-color: rgba(70, 70, 70, 0.81);
+  }
+  .body .contend__cards-proyectos .card .contenido a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    transition: color 0.5s ease;
+  }
+  .body .contend__cards-proyectos .card .contenido a:hover {
+    color: #6ede8a;
+  }
+  .body .contend__cards-proyectos .card .contenido .leyenda__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .body .contend__cards-proyectos .card .contenido .iconos__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 475px) {
   body {
@@ -825,5 +968,25 @@ body.modo-claro {
   body .contenido__principal .contenedor__foto .foto {
     width: 350px;
     margin: 0;
+  }
+  body .contenido__principal .redes__sociales {
+    grid-area: redes;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body .contenido__principal .redes__sociales .list__iconos {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+  }
+  body .contenido__principal .redes__sociales .iconos {
+    width: 25px;
+    margin: 0px;
+    transition: transform 0.3s ease;
+  }
+  body .contenido__principal .redes__sociales .iconos:hover {
+    transform: scale(1.4);
   }
 }/*# sourceMappingURL=style.css.map */

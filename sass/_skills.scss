@@ -15,6 +15,9 @@
   }
 
   .contend__cards {
+    background: url(../imagenes/Sound\ Wave.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -29,7 +32,7 @@
       margin: 40px 70px;
       box-shadow: 0px 0px 5px 0px #000000;
       cursor: pointer;
-
+      background-color: #00000075;
       &:hover > .skill__img {
         width: 150px;
         height: 150px;
