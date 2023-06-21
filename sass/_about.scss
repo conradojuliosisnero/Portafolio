@@ -25,11 +25,12 @@
         padding: 25px 0px 0px 0px;
         // imagen del perfil 
         .about__imagen{
+            width: 100%;
             @include caja_flex(flex,center,center);
             flex-direction: column;
             padding: 0px 35px;
             .imagen{
-                width: 220px;
+                width: 100%;
                 object-fit: cover;
             }
             span{

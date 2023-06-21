@@ -13,12 +13,16 @@
       "foto foto foto foto"
       "redes redes redes redes";
       .redes__sociales {
+        display: flex;
+        justify-content: space-evenly;
         .list__iconos{
           display: flex;
+          justify-content: center;
+          width: 100%;
         }
         .iconos {
-          width: 35px;
-          margin: 0px 70px;
+          width:45px;
+          margin: 0px 5px;
           cursor: pointer;
           transition: transform 0.3s ease;
           &:hover {
@@ -59,8 +63,7 @@
       .contenedor__foto {
         order: 1;
         .foto {
-          width: 350px;
-          margin: 0;
+          width: 300px;
           margin: 40px 0px;
         }
       }
@@ -84,8 +87,10 @@
         @include caja_flex(flex, center, center);
         flex-direction: column;
         .about__imagen {
+          
+          padding: 0;
           .imagen {
-            width: 350px;
+            width: 250px;
           }
         }
         // caja de texto
@@ -129,6 +134,42 @@
               }
             }
           }
+        }
+      }
+    }
+    .seccion__skills {
+      width: 100%;
+      padding-top: 50px;
+    
+      .skill__titulo-contend {
+        width: 100%;
+        @include caja_flex(flex, center, center);
+        flex-direction: column;
+    
+        .titulo {
+          padding: 20px 0px 5px 0px;
+          font-size: 45px;
+          font-weight: 500;
+        }
+      }
+    
+      .contend__cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        // gap: 70px;
+    
+        .skill__card {
+          position: relative;
+          width: 360px;
+          height: 210px;
+          border-radius: 20px;
+          margin:0;
+          box-shadow: 0px 0px 5px 0px;
+          cursor: pointer;
         }
       }
     }

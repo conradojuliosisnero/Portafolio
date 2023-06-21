@@ -11,8 +11,7 @@
         @include caja_flex(flex,center,center);
         flex-direction: column;
         .list__iconos{
-            list-style: none;
-
+            width: 100%;
         }
         .iconos{
             width: 35px;    
@@ -84,11 +83,11 @@
     }
     .contenedor__foto{
         @include caja_flex(flex,center,center);       
-        // width: 100%;
+        width: 100%;
         grid-area: foto;
         .foto{
-            width:250px;
-            // object-fit: cover;
+            width:380px;
+            object-fit: cover;
             border-radius:90% 10% 42% 58% / 47% 42% 58% 53%  ;
         }
     }
