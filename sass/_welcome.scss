@@ -64,21 +64,41 @@
                 background-color: $clr-light-green;                
                 border-radius:7px;
                 border: none;
-                padding: 15px 30px;
+                padding: 20px 35px;
                 margin: 25px 0px;
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
-                transition: box-shadow .3s ease-in-out;
-                a{
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-size: $texto;
-                    font-weight: 600;
-                }                
+                transition:box-shadow .5s ease-in-out;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-color: $clr-dark-pastel-green;
+                    width: 1px;
+                    height: 1px;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 50%;
+                    z-index: 1;
+                    transition: transform .5s ease-in-out;
+                }
                 &:hover{
-                box-shadow: 0px 3px 15px 0px $clr-malachite;
-                background-color: $clr-light-green;
+                    box-shadow: 0px 3px 15px 0px $clr-malachite;
+                    background-color: $clr-light-green;
+                }
+                &:hover::after{
+                    transform: scale(700);
+                    bottom:0;
+                }
+                span{
+                    position: relative;
+                    z-index: 2;
+                    a{
+                        color: #ffffff;
+                        text-decoration: none;
+                        font-size: 25px;
+                        font-weight: 600;
+                    }                
                 }
             }
         }
