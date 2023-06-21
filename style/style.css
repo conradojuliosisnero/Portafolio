@@ -163,7 +163,9 @@ body.modo-claro {
   flex-direction: column;
 }
 .contenido__principal .redes__sociales .list__iconos {
+  display: flex;
   width: 100%;
+  justify-content: center;
 }
 .contenido__principal .redes__sociales .iconos {
   width: 35px;
@@ -281,7 +283,6 @@ body.modo-claro {
   padding: 25px 0px 0px 0px;
 }
 .about .about__contenido .about__imagen {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,7 +290,7 @@ body.modo-claro {
   padding: 0px 35px;
 }
 .about .about__contenido .about__imagen .imagen {
-  width: 100%;
+  width: 350px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -384,7 +385,7 @@ body.modo-claro {
   height: 210px;
   border-radius: 20px;
   margin: 40px 70px;
-  box-shadow: 0px 0px 5px 0px;
+  box-shadow: 0px 0px 5px 0px #000000;
   cursor: pointer;
 }
 .seccion__skills .contend__cards .skill__card:hover > .skill__img {
@@ -404,8 +405,8 @@ body.modo-claro {
   z-index: 10;
   position: absolute;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 0px 15px 0px;
+  background: rgba(14, 14, 14, 0.534);
+  box-shadow: 0px 0px 15px 0px #2c2c2c;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: solid 1px rgba(255, 255, 255, 0.2);
@@ -471,6 +472,7 @@ body.modo-claro {
   transition: background-color 0.5s ease-in;
   cursor: pointer;
   overflow: hidden;
+  z-index: 1000;
 }
 .btn__fijo a {
   display: flex;
