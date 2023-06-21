@@ -9,9 +9,7 @@
     .redes__sociales{
         grid-area: redes;
         @include caja_flex(flex,center,center);
-        // flex-basis: 50px;
         flex-direction: column;
-        // padding: 0px 20px;
         .list__iconos{
             list-style: none;
 

@@ -1,5 +1,5 @@
 .navegador {
-  width: 100%;
+  width: 80%;
   @include caja_flex(flex, center, center);
   position: relative;
   z-index: 1;
@@ -9,10 +9,10 @@
 
   .navagador__titulo {
     width: 100%;
-
     display: flex;
     justify-content: center;
     position: relative;
+    flex-shrink: 2;
     .titulo {
       position: relative;
       padding: 10px;
@@ -50,6 +50,7 @@
   }
   .contend__swich {
     display: flex;
+    flex-shrink: 5;
     width: 100%;
     .swich {
       display: flex;

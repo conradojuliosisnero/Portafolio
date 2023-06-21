@@ -1,0 +1,15 @@
+.seccion__proyectos{
+    width: 100%;
+    display: flex;
+    padding: 50px;
+    .contend__titulo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .titulo{
+            font-size: 45px;
+            font-weight: 500;
+            padding: 10px;
+        }
+    }
+}

@@ -1,7 +1,10 @@
 @media screen and (max-width: 1024px) {
   .body {
-    position: relative;
-    // padding: 0px 30px;
+    .navegador{
+      .navagador__titulo{
+        flex-shrink: 3;
+      }
+    }
     .contenido__principal {
       display: grid;
       grid-template-columns: repeat(4,1fr);
@@ -10,7 +13,9 @@
       "foto foto foto foto"
       "redes redes redes redes";
       .redes__sociales {
-        flex-direction: row;
+        .list__iconos{
+          display: flex;
+        }
         .iconos {
           width: 35px;
           margin: 0px 70px;
@@ -42,6 +47,7 @@
         }
         .boton__contactar {
           margin-left: 35px;
+
           z-index: -1;
           .boton {
             a {
