@@ -228,10 +228,50 @@
 // moviles
 @media screen and (max-width: 475px) {
   body {
-    // position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
+    
+    .Introduccion {
+      @include caja_flex(flex, center, center);
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-color: #000000;
+      .layer {
+        position: absolute;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .nombre {
+        cursor: pointer;
+        font-weight: 900;
+        font-size: 35px;
+        transition: color 0.5s ease-in;
+        z-index: 2;
+        color: #ffffff;
+        -webkit-box-reflect: below -20px -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(transparent),
+            color-stop(25%, transparent),
+            to(rgba(255, 255, 255, 0.33))
+          );
+          a{
+            text-decoration: none;
+            color: #ffffff;
+            transition: color .5s ease-in-out;
+              &:hover {
+                color: $clr-light-green;
+          }
+      }
+    }
+    }
+
     .navegador {
       position: relative;
       justify-content: space-between;
