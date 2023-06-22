@@ -589,6 +589,7 @@ body.modo-claro {
 }
 
 .btn__fijo {
+  display: none;
   width: 90px;
   height: 90px;
   right: 30px;
