@@ -1,4 +1,4 @@
-// colores 
+// colores
 
 $clr-pakistan-green: #10451dff;
 $clr-dartmouth-green: #155d27ff;
@@ -11,53 +11,102 @@ $clr-light-green: #6ede8aff;
 $clr-celadon: #92e6a7ff;
 $clr-celadon-2: #b7efc5ff;
 
-// fuentes 
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap');
+// fuentes
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
 
-$font:'Red Hat Display', sans-serif;
+$font: "Red Hat Display", sans-serif;
 
-$titulos:27px;
-$encabezado:20px;
-$texto:17px;
+$titulos: 27px;
+$encabezado: 20px;
+$texto: 17px;
 
-// funciones 
-@mixin caja_flex($display,$alig,$justify){
-    display: $display;
-    align-items: $alig;
-    justify-content: $justify;
+// funciones
+@mixin caja_flex($display, $alig, $justify) {
+  display: $display;
+  align-items: $alig;
+  justify-content: $justify;
 }
 
-// estilos globales 
+// estilos globales
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-size: 16px;
+body {
+  font-size: 16px;
+  width: 100%;
+  position: relative;
+  transition: background-color 0.5s ease-in;
+
+  &.modo-oscuro {
+    background-color: #282828;
+    color: #ffffff;
+    transition: 0.5s ease-in all;
+  }
+
+  &.modo-claro {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+*,
+::after,
+::before {
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Introduccion {
+  @include caja_flex(flex, center, center);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #000000;
+  .layer {
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 0;
     width: 100%;
-    position: relative;
-    transition:background-color .5s ease-in;
-
-    &.modo-oscuro{
-        background-color: #282828;
-        color: #ffffff;
-        transition:.5s ease-in all;
-
-    }
-    
-    &.modo-claro{
-        background-color: #ffffff;
-        color: #000000;
-    }
-
+    height: 100%;
+  }
+  .nombre {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 70px;
+    transition: color 0.5s ease-in;
+    z-index: 2;
+    color: #ffffff;
+    -webkit-box-reflect: below -30px -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(transparent),
+        color-stop(25%, transparent),
+        to(rgba(255, 255, 255, 0.33))
+      );
+      a{
+            text-decoration: none;
+            color: #ffffff;
+          &:hover {
+            animation: colores 0.4s ease-in-out infinite;
+          }
+      }
+  }
 }
 
-
-
-*,::after,::before{
-    font-family: $font;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// @keyframes colores {
+//     0%{
+//         color: #000000;
+//     }
+//     50%{
+//         color: #000000;
+//     }
+//     100%{
+//         color: #23e1a5ff;
+//     }
+// }
