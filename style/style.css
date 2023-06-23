@@ -8,6 +8,7 @@ body {
   width: 100%;
   position: relative;
   transition: background-color 0.5s ease-in;
+  overflow-x: hidden;
 }
 body.modo-oscuro {
   background-color: #282828;
@@ -36,6 +37,7 @@ body.modo-claro {
   height: 100vh;
   position: relative;
   background-color: #000000;
+  overflow: hidden;
 }
 .Introduccion .layer {
   position: absolute;
@@ -320,6 +322,7 @@ body.modo-claro {
   justify-content: center;
   flex-direction: column;
   padding-top: 80px;
+  background-color: #000000;
 }
 .about .about__titulo {
   display: flex;
@@ -330,6 +333,7 @@ body.modo-claro {
 .about .about__titulo .titulo {
   font-size: 45px;
   font-weight: 500;
+  color: #f8f8f8;
 }
 .about .about__titulo .leyenda {
   font-weight: 500;
@@ -360,6 +364,7 @@ body.modo-claro {
   position: absolute;
   left: 150px;
   bottom: 0;
+  color: #bbbbbb;
   border: solid #777777 2px;
   border-radius: 10px;
   font-weight: 600;
@@ -444,6 +449,7 @@ body.modo-claro {
 .about .about__contenido .about__texto .estadisticas div .numero {
   font-size: 25px;
   font-weight: 900;
+  color: #ffffff;
 }
 
 .seccion__skills {

@@ -4,6 +4,7 @@
     @include caja_flex(flex,center,center);
     flex-direction: column;
     padding-top:80px;
+    background-color: #000000;
     .about__titulo{
         @include caja_flex(flex,center,center);
         flex-direction: column;
@@ -11,6 +12,8 @@
         .titulo{
             font-size: 45px;
             font-weight: 500;
+            color: #f8f8f8
+
         }
         .leyenda{
             font-weight: 500;
@@ -37,6 +40,7 @@
                 position: absolute;
                 left: 150px;
                 bottom: 0;
+                color: #bbbbbb;
                 border: solid #777777 2px;
                 border-radius: 10px;
                 font-weight: 600;
@@ -117,7 +121,7 @@
                         .numero{
                             font-size: 25px;
                             font-weight: 900;
-                            // color: #000000;
+                            color: #ffffff;
                         }
                     }
 
