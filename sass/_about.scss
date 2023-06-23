@@ -4,7 +4,6 @@
     @include caja_flex(flex,center,center);
     flex-direction: column;
     padding-top:80px;
-    background-color: #000000;
     .about__titulo{
         @include caja_flex(flex,center,center);
         flex-direction: column;
