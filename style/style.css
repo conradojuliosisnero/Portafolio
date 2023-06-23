@@ -332,7 +332,6 @@ body.modo-claro {
 .about .about__titulo .titulo {
   font-size: 45px;
   font-weight: 500;
-  color: #f8f8f8;
 }
 .about .about__titulo .leyenda {
   font-weight: 500;
@@ -448,7 +447,6 @@ body.modo-claro {
 .about .about__contenido .about__texto .estadisticas div .numero {
   font-size: 25px;
   font-weight: 900;
-  color: #ffffff;
 }
 
 .seccion__skills {
