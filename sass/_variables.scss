@@ -50,6 +50,15 @@ body {
     background-color: #ffffff;
     color: #000000;
   }
+  &.modo__oscuro{
+    background-color: #000000;
+    .nombre{
+      a{
+        color: #ffffff;
+      }
+    }
+    
+  }
 }
 
 *,
@@ -62,11 +71,69 @@ body {
 }
 
 .Introduccion {
+  .btn__dark {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    z-index: 1;
+    .swich {
+      display: flex;
+      height: 60px;
+      width: 150px;
+      border-radius: 50px;
+      border: none;
+      background-color: #282828;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 60px;
+        left: 0;
+        top: 0;
+        right: unset;
+        background-color: #d8d8d8;
+        box-shadow: #d7d7d7 0px 0px 5px 0px;
+        border-radius: 50%;
+        transition: .5s ease all;
+    }
+    &.active {
+        background-color: #ffffff;
+        &::after {
+          left: unset;
+          right: 0;
+        }
+      }
+      span {
+        width: 60px;
+        height: 60px;
+        display: block;
+        object-fit: cover;
+        line-height: 30px;
+        .luna,
+        .sol {
+          display: flex;
+          width: 60px;
+          height: 60px;
+        }
+        .luna{
+          margin-left: 25px;
+        }
+        .sol{
+          margin-left: -4px;
+        }
+      }
+    }
+  }
   @include caja_flex(flex, center, center);
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: #000000;
   overflow: hidden;
   .layer {
     position: absolute;
@@ -82,7 +149,6 @@ body {
     font-size: 70px;
     transition: color 0.5s ease-in;
     z-index: 2;
-    color: #ffffff;
     -webkit-box-reflect: below -30px -webkit-gradient(
         linear,
         left top,
@@ -93,7 +159,7 @@ body {
       );
       a{
         text-decoration: none;
-        color: #ffffff;
+        color: #000000;
         transition: color .5s ease-in-out;
           &:hover {
             color: $clr-light-green;
@@ -105,6 +171,7 @@ body {
       }
   }
 }
+
 }
 // @keyframes colores {
 //     0%{

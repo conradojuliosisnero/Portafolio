@@ -60,6 +60,13 @@ sr.reveal(".boton__contactar", {
   distance: "50px",
 });
 
+// bienvenida texto 
+sr.reveal(".bienvenida__texto", {
+  duration: 2000,
+  origin: "",
+  distance: "150px",
+});
+
 // imagen principal
 sr.reveal(".contenedor__foto", {
   duration: 2000,

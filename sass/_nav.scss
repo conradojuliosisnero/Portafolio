@@ -77,9 +77,11 @@
     }
     &.active {
         background-color: #ffffff;
+
         &::after {
           left: unset;
           right: 0;
+
         }
       }
       span {
