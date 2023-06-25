@@ -1016,6 +1016,13 @@ body.modo__oscuro .nombre a {
 .footer .more__info span a:hover {
   color: #6ede8a;
 }
+.footer .contend__img {
+  display: flex;
+  width: 100%;
+}
+.footer .contend__img .img__footer {
+  width: 45px;
+}
 
 @media screen and (max-width: 1024px) {
   .body .navegador {
