@@ -108,10 +108,28 @@
         @include caja_flex(flex,center,center);       
         width: 100%;
         grid-area: foto;
+        cursor: pointer;
         .foto{
             width:380px;
             object-fit: cover;
-            border-radius:90% 10% 42% 58% / 47% 42% 58% 53%  ;
+            transition:transform .5s ease-out;
+            animation: animate 4s infinite;
+            animation-fill-mode: forwards;
+            // &:hover{
+            //     transform: translateY(-50px);
+            // }
         }
+    }
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-20px);
     }
 }

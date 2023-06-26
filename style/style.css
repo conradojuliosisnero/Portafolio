@@ -371,14 +371,28 @@ body.modo__oscuro .nombre a {
   justify-content: center;
   width: 100%;
   grid-area: foto;
+  cursor: pointer;
 }
 .contenido__principal .contenedor__foto .foto {
   width: 380px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 90% 10% 42% 58%/47% 42% 58% 53%;
+  transition: transform 0.5s ease-out;
+  animation: animate 4s infinite;
+  animation-fill-mode: forwards;
 }
 
+@keyframes animate {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
 .about {
   width: 100%;
   display: flex;
@@ -547,6 +561,7 @@ body.modo__oscuro .nombre a {
   cursor: pointer;
   box-shadow: 0px 0px 15px 0px #666666;
   background-color: white;
+  overflow: hidden;
 }
 .seccion__skills .contend__cards .skill__card:hover > .skill__img {
   width: 150px;
@@ -583,6 +598,8 @@ body.modo__oscuro .nombre a {
   right: 0;
   padding: 28px;
   height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .seccion__skills .contend__cards .skill__card .skill__contend .skill__titulo {
   font-size: 25px;
@@ -720,6 +737,22 @@ body.modo__oscuro .nombre a {
 .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills:hover {
   box-shadow: 0px 0px 15px 0px #4ad66d, 0px 0px 25px 0px #4ad66d;
   background-color: #6ede8a;
+}
+
+::-webkit-scrollbar {
+  width: 13px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bcbbbb; /* Color del scrollbar */
+  border-radius: 15px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #757575; /* Color del scrollbar */
+  border-radius: 15px;
 }
 
 .seccion__proyectos {
