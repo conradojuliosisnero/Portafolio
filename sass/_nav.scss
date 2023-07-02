@@ -48,57 +48,6 @@
       }
     }
   }
-  .contend__swich {
-    display: flex;
-    flex-shrink: 5;
-    width: 250px;
-    .swich {
-      display: flex;
-      height: 30px;
-      border-radius: 50px;
-      border: none;
-      background-color: #282828;
-      position: relative;
-      cursor: pointer;
-      outline: none;
-      overflow: hidden;
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 30px;
-        height: 30px;
-        left: 0;
-        top: 0;
-        right: unset;
-        background-color: #fffefe;
-        box-shadow: #d7d7d7 0px 0px 5px 0px;
-        border-radius: 50%;
-    }
-    &.active {
-        background-color: #ffffff;
-
-        &::after {
-          left: unset;
-          right: 0;
-
-        }
-      }
-      span {
-        width: 30px;
-        height: 30px;
-        display: block;
-        object-fit: cover;
-        line-height: 30px;
-        .luna,
-        .sol {
-          display: flex;
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
 }
 
 .nav-dark {

@@ -116,6 +116,7 @@ sr.reveal(".skill__card", {
   origin: "bottom",
   distance: "-300px",
 });
+
 // proyectos
 sr.reveal(".card", {
   duration: 3000,

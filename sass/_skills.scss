@@ -209,11 +209,11 @@
 }
 
 ::-webkit-scrollbar {
-  width: 13px; /* Ancho del scrollbar */
+  width: 5px; /* Ancho del scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #bcbbbb; /* Color del scrollbar */
+  background-color: $clr-celadon; /* Color del scrollbar */
   border-radius: 15px;
   transition:.5s ease ;
 }

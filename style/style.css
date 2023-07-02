@@ -181,56 +181,6 @@ body.modo__oscuro .nombre a {
 .navegador .menu .enlaces:hover {
   color: #6ede8a;
 }
-.navegador .contend__swich {
-  display: flex;
-  flex-shrink: 5;
-  width: 250px;
-}
-.navegador .contend__swich .swich {
-  display: flex;
-  height: 30px;
-  border-radius: 50px;
-  border: none;
-  background-color: #282828;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-}
-.navegador .contend__swich .swich::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 30px;
-  height: 30px;
-  left: 0;
-  top: 0;
-  right: unset;
-  background-color: #fffefe;
-  box-shadow: #d7d7d7 0px 0px 5px 0px;
-  border-radius: 50%;
-}
-.navegador .contend__swich .swich.active {
-  background-color: #ffffff;
-}
-.navegador .contend__swich .swich.active::after {
-  left: unset;
-  right: 0;
-}
-.navegador .contend__swich .swich span {
-  width: 30px;
-  height: 30px;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  line-height: 30px;
-}
-.navegador .contend__swich .swich span .luna,
-.navegador .contend__swich .swich span .sol {
-  display: flex;
-  width: 30px;
-  height: 30px;
-}
 
 .nav-dark {
   background-color: #282828;
@@ -740,11 +690,11 @@ body.modo__oscuro .nombre a {
 }
 
 ::-webkit-scrollbar {
-  width: 13px; /* Ancho del scrollbar */
+  width: 5px; /* Ancho del scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #bcbbbb; /* Color del scrollbar */
+  background-color: #92e6a7; /* Color del scrollbar */
   border-radius: 15px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
