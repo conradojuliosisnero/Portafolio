@@ -1,5 +1,5 @@
 const nav = document.querySelector(".navegador");
-const modoDark = document.querySelector(".swich");
+const modoDark = document.querySelector(".toggle");
 const btnFijo = document.querySelector(".btn__fijo");
 const cardSkill = document.getElementsByClassName(".skill__card");
 
