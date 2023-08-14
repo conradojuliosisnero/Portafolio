@@ -70,7 +70,7 @@
                     cursor: pointer;
                     position: relative;
                     overflow: hidden;
-                    transition: box-shadow .3s ease-in-out;
+                    transition: box-shadow .2s ease-in-out;
                     &::after{
                         content: '';
                         position: absolute;
@@ -79,7 +79,7 @@
                         left: 0;
                         top: -150px;
                         background-color: $clr-dark-pastel-green;
-                        transition: top .5s ease-in-out;
+                        transition: top .2s ease-in-out;
                     }
                     &:hover::after{
                         top: 0;
