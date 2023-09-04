@@ -828,6 +828,12 @@ body.modo__oscuro .nombre a {
   align-items: center;
   justify-content: center;
 }
+.seccion__proyectos .contend__cards-proyectos .card .contenido .icon svg {
+  fill: #ffffff;
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
 .seccion__proyectos .contend__cards-proyectos .card:hover > .contenido {
   bottom: 0;
 }

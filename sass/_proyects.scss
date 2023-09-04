@@ -69,6 +69,13 @@
                 .iconos__card{
                     @include caja_flex(flex,center,center);
                 }
+                .icon svg{
+                  fill: #ffffff;
+                  width: 30px;
+                  height: 30px;
+                  margin-top: 20px;
+                  
+                }
             }
             &:hover > .contenido{
                 bottom: 0;
